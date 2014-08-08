@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 
 import requests
 from bs4 import BeautifulSoup
@@ -62,12 +62,19 @@ class myFolia(object):
         html = self.__get(myFolia.BASE_URL + link)
         soup = BeautifulSoup(html)
 
+        data = {}
+        for pref in ['like', 'love', 'dislike']:
+            data[pref] = []
+            span_prefs = soup.findAll('span', attrs={'class': pref})
+            for p in span_prefs:
+                data[pref].append(p.findNext('a')['href'])
+
         care = soup.find('form', attrs={'class': 'display clearfix wiki-table'})
-        data = []
         for label in care.findAll('label'):
-            data.append([label.contents[0].strip(), label.find('span').text.strip()])
+            data[label.contents[0].strip()] = label.find('span').text.strip()
 
         return data
+
 
 
 if __name__ == '__main__':
