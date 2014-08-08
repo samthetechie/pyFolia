@@ -105,29 +105,32 @@ class myFolia(object):
     def parse_Can_Sow_Direct(self, data):
         return data == 'Yes'
 
-    def parse_Ideal_Germination_Temperature_Range(self, data):
-        return self.__get_numbers(data)
+    #def parse_Growing_Temperatures(self, data):
+    #    return self.__get_numbers(data)
 
-    def parse_Mature_Spread(self, data):
-        return self.__get_numbers(data)
+    #def parse_Ideal_Germination_Temperature_Range(self, data):
+    #    return self.__get_numbers(data)
 
-    def parse_Mature_Height(self, data):
-        return self.__get_numbers(data)
+    #def parse_Mature_Spread(self, data):
+    #    return self.__get_numbers(data)
 
-    def parse_Sowing_Depth(self, data):
-        return self.__get_numbers(data)
+    #def parse_Mature_Height(self, data):
+    #    return self.__get_numbers(data)
 
-    def parse_Sowing_Distance_Apart(self, data):
-        return self.__get_numbers(data)
+    #def parse_Sowing_Depth(self, data):
+    #    return self.__get_numbers(data)
 
-    def parse_Sowing_Row_Distance_Apart(self, data):
-        return self.__get_numbers(data)
+    #def parse_Sowing_Distance_Apart(self, data):
+    #    return self.__get_numbers(data)
 
-    def parse_USDA_Zone_Range(self, data):
-        return self.__get_numbers(data)
+    #def parse_Sowing_Row_Distance_Apart(self, data):
+    #    return self.__get_numbers(data)
 
-    def parse_pH_Range(self, data):
-        return self.__get_numbers(data)
+    #def parse_USDA_Zone_Range(self, data):
+    #    return self.__get_numbers(data)
+
+    #def parse_pH_Range(self, data):
+    #    return self.__get_numbers(data)
 
     def get_data(self, plant):
         link = self.__search(plant)
@@ -151,7 +154,11 @@ class myFolia(object):
                 parser = getattr(self, 'parse_' + key)
                 data[key] = parser(val)
             except AttributeError:
-                data[key] = val
+                nums = self.__get_numbers(val)
+                if nums:
+                    data[key] = nums
+                else:
+                    data[key] = val
             except Exception:
                 data[key] = val
 
