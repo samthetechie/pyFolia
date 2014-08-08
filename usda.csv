@@ -1,3 +1,4 @@
+#USA
 #City, State, Zone
 Albuquerque, New Mexico, 7a
 Oklahoma City, Oklahoma, 7a
@@ -53,3 +54,69 @@ New York, New York, 7b
 Washington, D.C., 7b 
 Norfolk, Virginia, 8a
 Wichita, Kansas, 6b
+
+#Europe
+#City, Country, Zone
+Amsterdam, The Netherlands, 8
+Antwerp, Belgium, 8
+Belfast, Northern Ireland, 9
+Berlin, Germany, 7a
+Bratislava, Slovakia, 7a, 
+Bucharest, Romania, 6a
+Cardiff, Wales, 9, 
+Catania, Italy, 10
+Copenhagen, Denmark, 8, 
+Cork, Ireland, 9b
+Dublin, Ireland, 9, 
+Düsseldorf, Germany, 8
+Edinburgh, Scotland, 8, 
+Gdańsk, Poland, 7
+Glasgow, Scotland, 9a, 
+Hamburg, Germany, 7
+Helsinki, Finland, 5b, 
+Istanbul, Turkey, 8b
+Kaliningrad, Russia, 6, 
+Kiev, Ukraine, 5
+Kraków, Poland, 6, 
+Lisbon, Portugal, 10a
+Ljubljana, Slovenia, 7, 
+London, England, 9a
+Madrid, Spain, 8-9, 
+Málaga, Spain, 10b
+Marseille, France, 9, 
+Milan, Italy, 7-8
+Minsk, Belarus, 5а
+Moscow, Russia, 4
+Munich, Germany, 6, 
+Murmansk, Russia, 5
+Nicosia, Cyprus, 10b, 
+Oslo, Norway, 6
+Simferopol, Ukraine, 7a, 
+Palma, Spain, 10
+Paris, France, 8a, 
+Portsmouth, England, 9b, 
+Prague, Czech Republic, 7a
+Reykjavík, Iceland, 7
+Riga, Latvia, 6
+Rome, Italy, 9b
+Rovaniemi, Finland, 4
+Saint Petersburg, Russia, 5a
+Sarajevo, Bosnia and Herzegovina
+7, Santander, Spain, 10a
+Simrishamn, Sweden, 8a
+Sochi, Russia, 9
+Sofia, Bulgaria, 6
+Stockholm, Sweden, 7
+Strasbourg, France, 7
+Tallinn, Estonia, 5
+Tuapse, Russia, 8
+Tórshavn, Faroe Islands, 7-8
+Tromsø, Norway, 7
+Trondheim, Norway, 6
+Umeå, Sweden, 5
+Vienna, Austria, 6-7
+Vilnius, Lithuania, 5
+Vorkuta, Russia, 2
+Valletta, Malta, 11a
+Warsaw, Poland, 6
+Zürich, Switzerland, 7

@@ -11,6 +11,20 @@ usage:
 
 $ python geocode.py "oranienstrasse 183"
 
+sample output: 
+
+52.5007674, 13.4206237
+
+revese geocoder
+---------------
+usage:
+
+$ reverse.py "oranienstrasse 183"
+
+sample output: 
+
+Oranienstraße 184, 10999 Berlin, Germany
+
 myFolia scraper
 ---------------
 usage:

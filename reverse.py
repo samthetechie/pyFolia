@@ -6,9 +6,11 @@ You can also use it directly as a Python module in your code.
 
 usage:
 
-$ python geocode.py "oranienstrasse 183"
+$ reverse.py "oranienstrasse 183"
 
-sample output: 52.50035, 13.42055
+sample output: 
+
+Oranienstraße 184, 10999 Berlin, Germany
 '''
 
 #>>> import geocoder # pip install geocoder
