@@ -1,12 +1,18 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 '''
 This is a python geocoder with a cli wrapper. It simple yet powerful command line address to lat/lng lookup.
 It has the following providers to choose from: OSM, Bing, Nokia, Yahoo, Google, ArcGIS, TomTom, Geonames, MapQuest, Geocoder.ca.
 You can also use it directly as a Python module in your code.
+
+usage:
+
+$ python geocode.py "oranienstrasse 183"
+
+sample output: 52.50035, 13.42055
 '''
 
 #>>> import geocoder # pip install geocoder
-#>>> g = geocoder.google('<address>')
+#>>> g = geocoder.osm('<address>')
 #>>> g.lat, g.lng
 #45.413140 -75.656703
 
@@ -33,7 +39,7 @@ def main():
                    help='an address to lookup (use "" when it\'s a sentence / more than one word)')
     args = parser.parse_args()
 
-    location = geocoder.google(args.address)
+    location = geocoder.osm(args.address)
     
     sys.stdout.write(bcolors.OKBLUE + str(location.lat) + ", " + str(location.lng) + bcolors.ENDC)
     sys.stdout.write("\n")
