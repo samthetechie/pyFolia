@@ -145,6 +145,8 @@ class myFolia(object):
         for label in care.findAll('label'):
             key = label.contents[0].strip().replace(' ', '_').replace('?', '')
             val = label.find('span').text.strip()
+            if val == 'Help build our wiki!':
+                continue
             try:
                 parser = getattr(self, 'parse_' + key)
                 data[key] = parser(val)
