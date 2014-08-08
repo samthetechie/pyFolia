@@ -5,6 +5,15 @@ description
 -----------
 a fun tool to help nerdy gardeners win at life
 
+geocoder
+--------
+usage:
+
+$ python geocode.py "oranienstrasse 183"
+
+sample output:
+52.50035, 13.42055
+
 virtualenv
 ----------
 
