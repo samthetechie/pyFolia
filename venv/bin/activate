@@ -37,7 +37,7 @@ deactivate () {
 # unset irrelavent variables
 deactivate nondestructive
 
-VIRTUAL_ENV="/home/samuel/documents/programming/python/pyFolia/venv"
+VIRTUAL_ENV="/home/file/projects/pyFolia/venv"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"

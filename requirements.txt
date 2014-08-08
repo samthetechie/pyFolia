@@ -1,1 +1,3 @@
 geocoder
+beautifulsoup4
+requests

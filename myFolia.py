@@ -1,5 +1,8 @@
+#!/usr/bin/python
+
 import requests
-from BeautifulSoup import BeautifulSoup
+from bs4 import BeautifulSoup
+
 #from lxml import etree
 
 
