@@ -5,11 +5,23 @@ It has the following providers to choose from: OSM, Bing, Nokia, Yahoo, Google, 
 You can also use it directly as a Python module in your code.
 '''
 
-# pip install geocoder
+#>>> import geocoder # pip install geocoder
+#>>> g = geocoder.google('<address>')
+#>>> g.lat, g.lng
+#45.413140 -75.656703
 
+# pip install geocoder
 import geocoder
 
-def __init__(self, input_address='Oranienstraße 183'):
+class bcolors:
+    HEADER = '\033[95m'
+    OKBLUE = '\033[94m'
+    OKGREEN = '\033[92m'
+    WARNING = '\033[93m'
+    FAIL = '\033[91m'
+    ENDC = '\033[0m'
+
+def __init__(self, input_address='Oranienstrasse 183'):
 	self.input_address = input_address
 
 def main():
@@ -23,8 +35,7 @@ def main():
 
     location = geocoder.google(args.address)
     
-    sys.stdout.write(bcolors.OKBLUE + location.lat + bcolors.ENDC)
-    sys.stdout.write(bcolors.OKBLUE + location.lng + bcolors.ENDC)
+    sys.stdout.write(bcolors.OKBLUE + str(location.lat) + ", " + str(location.lng) + bcolors.ENDC)
     sys.stdout.write("\n")
 
 if __name__ == "__main__":
