@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 '''
-This is a python geocoder with a cli wrapper. It simple yet powerful command line address to lat/lng lookup.
+This is a python geocoder reverse lookup with a cli wrapper. It simple yet powerful command line address to lat/lng to address lookup.
 It has the following providers to choose from: OSM, Bing, Nokia, Yahoo, Google, ArcGIS, TomTom, Geonames, MapQuest, Geocoder.ca.
 You can also use it directly as a Python module in your code.
 
