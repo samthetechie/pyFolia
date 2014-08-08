@@ -38,6 +38,7 @@ sample output:
 '''
 
 import requests
+import re
 from bs4 import BeautifulSoup
 
 
@@ -92,12 +93,48 @@ class myFolia(object):
         link = div.find('a')
         return link['href']
 
+    def __get_numbers(self, data):
+        nums = map(float, re.findall(r"[-+]?\d*\.\d+|\d+", data))
+        return nums
+
+    def parse_Difficulty(self, data):
+        desc, num = data.split()
+        score, scale = map(int, num.split('/'))
+        return [desc, [score, scale]]
+
+    def parse_Can_Sow_Direct(self, data):
+        return data == 'Yes'
+
+    def parse_Ideal_Germination_Temperature_Range(self, data):
+        return self.__get_numbers(data)
+
+    def parse_Mature_Spread(self, data):
+        return self.__get_numbers(data)
+
+    def parse_Mature_Height(self, data):
+        return self.__get_numbers(data)
+
+    def parse_Sowing_Depth(self, data):
+        return self.__get_numbers(data)
+
+    def parse_Sowing_Distance_Apart(self, data):
+        return self.__get_numbers(data)
+
+    def parse_Sowing_Row_Distance_Apart(self, data):
+        return self.__get_numbers(data)
+
+    def parse_USDA_Zone_Range(self, data):
+        return self.__get_numbers(data)
+
+    def parse_pH_Range(self, data):
+        return self.__get_numbers(data)
+
     def get_data(self, plant):
         link = self.__search(plant)
         html = self.__get(myFolia.BASE_URL + link)
         soup = BeautifulSoup(html)
 
-        data = {}
+        data = {'link': link}
         for pref in ['like', 'love', 'dislike']:
             data[pref] = []
             span_prefs = soup.findAll('span', attrs={'class': pref})
@@ -106,7 +143,15 @@ class myFolia(object):
 
         care = soup.find('form', attrs={'class': 'display clearfix wiki-table'})
         for label in care.findAll('label'):
-            data[label.contents[0].strip()] = label.find('span').text.strip()
+            key = label.contents[0].strip().replace(' ', '_').replace('?', '')
+            val = label.find('span').text.strip()
+            try:
+                parser = getattr(self, 'parse_' + key)
+                data[key] = parser(val)
+            except AttributeError:
+                data[key] = val
+            except Exception:
+                data[key] = val
 
         return data
 
