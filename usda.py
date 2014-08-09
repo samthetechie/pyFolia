@@ -14,11 +14,14 @@ $ usda.py "Oranienstraße 184, 10999 Berlin, Germany"
 sample output: 
 
 7a
+
+todo, compare strings with the ratio function. Decide on threshold.
+https://stackoverflow.com/questions/682367/good-python-modules-for-fuzzy-string-comparison
 '''
 
 import re
 import csv
-
+import levenshtein
 
 address = "Oranienstraße 184, 10999 Berlin, Germany"
 addressTokens = address.split(",")
