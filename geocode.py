@@ -1,4 +1,6 @@
 #!/usr/bin/env python
+#-*- coding: utf-8 -*-
+
 '''
 This is a python geocoder with a cli wrapper. It simple yet powerful command line address to lat/lng lookup.
 It has the following providers to choose from: OSM, Bing, Nokia, Yahoo, Google, ArcGIS, TomTom, Geonames, MapQuest, Geocoder.ca.

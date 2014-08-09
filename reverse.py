@@ -1,4 +1,6 @@
 #!/usr/bin/env python
+#-*- coding: utf-8 -*-
+
 '''
 This is a python geocoder reverse lookup with a cli wrapper. It simple yet powerful command line address to lat/lng to address lookup.
 It has the following providers to choose from: OSM, Bing, Nokia, Yahoo, Google, ArcGIS, TomTom, Geonames, MapQuest, Geocoder.ca.
@@ -45,7 +47,9 @@ def main():
     g = geocoder.reverse([location.lat,location.lng])
     g.address
     
-    sys.stdout.write(bcolors.OKBLUE + str(g.address) + bcolors.ENDC)
+    sys.stdout.write(bcolors.OKBLUE + str(location.lat) + ", " + str(location.lng) + bcolors.ENDC)
+    sys.stdout.write("\n")
+    sys.stdout.write(bcolors.OKGREEN + str(g.address) + bcolors.ENDC)
     sys.stdout.write("\n")
 
 if __name__ == "__main__":
