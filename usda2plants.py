@@ -2,7 +2,7 @@
 #-*- coding: utf-8 -*-
 
 '''
-This is a python usda growing zone to plat lookup tool with a cli wrapper.
+This is a python usda growing zone to plant lookup tool with a cli wrapper.
 You can also use it directly as a Python module in your code.
 
 usage:
