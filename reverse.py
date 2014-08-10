@@ -22,6 +22,8 @@ Oranienstraße 184, 10999 Berlin, Germany
 
 # pip install geocoder
 import geocoder
+import argparse
+import sys
 
 class bcolors:
     HEADER = '\033[95m'
@@ -34,9 +36,17 @@ class bcolors:
 def __init__(self, input_address='Oranienstrasse 183'):
 	self.input_address = input_address
 
+def reverse_lookup(address):    # write Fibonacci series up to n
+    location = geocoder.osm(address)
+    g = geocoder.reverse([location.lat,location.lng])
+    #g.address
+    
+    #sys.stdout.write(bcolors.OKBLUE + str(location.lat) + ", " + str(location.lng) + bcolors.ENDC)
+    #sys.stdout.write("\n")
+    sys.stdout.write(bcolors.OKGREEN + str(g.address) + bcolors.ENDC)
+    sys.stdout.write("\n")
+
 def main():
-    import argparse
-    import sys
     
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('address', metavar='text', nargs='+',

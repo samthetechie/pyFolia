@@ -29,7 +29,8 @@ class bcolors:
     FAIL = '\033[91m'
     ENDC = '\033[0m'
 
-def __init__(self, input_address='Oranienstrasse 183'):
+class geocoder_coords:
+    def __init__(self, input_address='Oranienstrasse 183'):
 	self.input_address = input_address
 
 def main():
