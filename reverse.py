@@ -47,8 +47,8 @@ def main():
     g = geocoder.reverse([location.lat,location.lng])
     g.address
     
-    sys.stdout.write(bcolors.OKBLUE + str(location.lat) + ", " + str(location.lng) + bcolors.ENDC)
-    sys.stdout.write("\n")
+    #sys.stdout.write(bcolors.OKBLUE + str(location.lat) + ", " + str(location.lng) + bcolors.ENDC)
+    #sys.stdout.write("\n")
     sys.stdout.write(bcolors.OKGREEN + str(g.address) + bcolors.ENDC)
     sys.stdout.write("\n")
 

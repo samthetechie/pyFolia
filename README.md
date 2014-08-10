@@ -72,6 +72,16 @@ sample output:
           u'/plants/82134-african-wormwood-artemisia-afra'],
  u'pH Range': u'6.0 - 6.5'}
 
+usda lookup
+-----------
+usage:
+
+$ usda.py "Oranienstraße 184, 10999 Berlin, Germany"
+#D145, 47410 Saint-Colomb-de-Lauzun, France
+
+sample output: 
+
+7a
 
 virtualenv
 ----------
