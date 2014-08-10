@@ -25,6 +25,14 @@ sample output:
 
 Oranienstraße 184, 10999 Berlin, Germany
 
+usage:
+
+$ reverse.py "52.5007674, 13.4206237"
+
+sample output: 
+
+Oranienstraße 184, 10999 Berlin, Germany
+
 myFolia scraper
 ---------------
 usage:
