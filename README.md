@@ -5,6 +5,10 @@ description
 -----------
 a fun tool to help nerdy gardeners win at life
 
+just... why?
+------------
+humans need to eat + food is tasty + fresh veg best for humans. hence grow tasty vegetables. but growing is hard + humans lazy so need to automate + solve for maximum win for least effort.
+
 geocoder
 --------
 usage:
