@@ -89,11 +89,18 @@ usda lookup
 usage:
 
 $ usda.py "Oranienstraße 184, 10999 Berlin, Germany"
-#D145, 47410 Saint-Colomb-de-Lauzun, France
 
 sample output: 
 
 7a
+
+usage:
+
+$ usda.py "D145, 47410 Saint-Colomb-de-Lauzun, France
+
+sample output: 
+
+9
 
 virtualenv
 ----------
