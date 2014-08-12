@@ -26,7 +26,7 @@ not working:
 import re
 import csv
 import reverse
-#import Levenshtein #giving false positives, stick with the 'dumb' way
+#import Levenshtein #giving false positives, stick with the 'dumb' way for now.
 
 class bcolors:
     HEADER = '\033[95m'
@@ -40,7 +40,7 @@ def __init__(self, input_address=''):
      self.input_address = input_address
 
 def main():
-    reverse.reverse_looku
+    #reverse.reverse_lookup
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('address', metavar='text', nargs='+',
                    help='an address to lookup (use "" when it\'s a sentence / more than one word)')
