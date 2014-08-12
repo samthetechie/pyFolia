@@ -137,7 +137,13 @@ If you are a Windows user, the following command is for you:
 
 $ venv\scripts\activate
 
-Installing Requirements
------------------------
+Installing dependancies from requirements file
+----------------------------------------------
 pip install -r requirements.txt
+
+other dependancies
+-------------------
+plotter.py additionally needs:
+
+easy_install https://github.com/mikedewar/d3py/tarball/master
 
