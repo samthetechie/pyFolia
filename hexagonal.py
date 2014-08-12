@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-radius = 4
+radius = 200
 for r in range(radius):
     print "radius %d" % r
     x = 0
