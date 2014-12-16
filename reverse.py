@@ -17,6 +17,7 @@ Oranienstraße 184, 10999 Berlin, Germany
 
 #>>> import geocoder # pip install geocoder
 #>>> g = geocoder.osm('<address>')
+#>>> g = geocoder.google('<address>')
 #>>> g.lat, g.lng
 #45.413140 -75.656703
 
@@ -37,7 +38,8 @@ def __init__(self, input_address='Oranienstrasse 183'):
 	self.input_address = input_address
 
 def reverse_lookup(address):    # write Fibonacci series up to n
-    location = geocoder.osm(address)
+    location = geocoder.google(address)
+    #location = geocoder.osm(address)
     g = geocoder.reverse([location.lat,location.lng])
     #g.address
     
