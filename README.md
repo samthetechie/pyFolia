@@ -19,7 +19,7 @@ sample output:
 
 52.5007674, 13.4206237
 
-revese geocoder
+reverse geocoder
 ---------------
 usage:
 
