@@ -1,7 +1,0 @@
-geocoder
-beautifulsoup4
-requests
-python-levenshtein
-pandas
-numpy
-vincent

@@ -1,0 +1,50 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "pyfolia"
+version = "0.1.0"
+description = "Deterministic garden planning for small vegetable beds."
+readme = "README.md"
+requires-python = ">=3.12"
+license = {text = "GPL-3.0-or-later"}
+authors = [{name = "pyFolia contributors"}]
+dependencies = []
+
+[dependency-groups]
+dev = [
+  "coverage",
+  "flake8",
+  "mypy",
+  "pytest",
+  "ruff",
+]
+
+[project.scripts]
+pyfolia = "pyfolia.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/pyfolia"]
+sources = ["src"]
+
+[tool.ruff]
+line-length = 88
+target-version = "py312"
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM", "RUF"]
+
+[tool.flake8]
+max-line-length = 88
+extend-ignore = ["E203", "W503"]
+exclude = [".git", ".venv", "build", "dist"]
+
+[tool.mypy]
+python_version = "3.12"
+strict = true
+files = ["src/pyfolia"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

@@ -1,0 +1,92 @@
+[
+  {
+    "name": "carrot",
+    "family": "Apiaceae",
+    "spacing_cm": 8,
+    "height_cm": 30,
+    "zones": ["3a", "3b", "4a", "4b", "5a", "5b", "6a", "6b", "7a", "7b", "8a", "8b", "9a", "9b", "10a"],
+    "likes": ["tomato", "lettuce", "basil"],
+    "dislikes": [],
+    "traits": ["root", "cool-season"]
+  },
+  {
+    "name": "tomato",
+    "family": "Solanaceae",
+    "spacing_cm": 60,
+    "height_cm": 150,
+    "zones": ["5a", "5b", "6a", "6b", "7a", "7b", "8a", "8b", "9a", "9b", "10a", "10b", "11a"],
+    "likes": ["basil", "carrot", "lettuce"],
+    "dislikes": ["potato"],
+    "traits": ["fruiting", "warm-season"]
+  },
+  {
+    "name": "basil",
+    "family": "Lamiaceae",
+    "spacing_cm": 25,
+    "height_cm": 45,
+    "zones": ["4b", "5a", "5b", "6a", "6b", "7a", "7b", "8a", "8b", "9a", "9b", "10a", "10b", "11a"],
+    "likes": ["tomato", "pepper"],
+    "dislikes": [],
+    "traits": ["herb", "warm-season"]
+  },
+  {
+    "name": "lettuce",
+    "family": "Asteraceae",
+    "spacing_cm": 20,
+    "height_cm": 25,
+    "zones": ["2a", "2b", "3a", "3b", "4a", "4b", "5a", "5b", "6a", "6b", "7a", "7b", "8a", "8b", "9a", "9b"],
+    "likes": ["carrot", "radish", "tomato"],
+    "dislikes": [],
+    "traits": ["leaf", "cool-season"]
+  },
+  {
+    "name": "radish",
+    "family": "Brassicaceae",
+    "spacing_cm": 5,
+    "height_cm": 20,
+    "zones": ["2a", "2b", "3a", "3b", "4a", "4b", "5a", "5b", "6a", "6b", "7a", "7b", "8a", "8b", "9a"],
+    "likes": ["lettuce", "carrot"],
+    "dislikes": [],
+    "traits": ["root", "quick-crop"]
+  },
+  {
+    "name": "pepper",
+    "family": "Solanaceae",
+    "spacing_cm": 45,
+    "height_cm": 70,
+    "zones": ["5b", "6a", "6b", "7a", "7b", "8a", "8b", "9a", "9b", "10a", "10b", "11a"],
+    "likes": ["basil", "carrot"],
+    "dislikes": [],
+    "traits": ["fruiting", "warm-season"]
+  },
+  {
+    "name": "potato",
+    "family": "Solanaceae",
+    "spacing_cm": 35,
+    "height_cm": 60,
+    "zones": ["3a", "3b", "4a", "4b", "5a", "5b", "6a", "6b", "7a", "7b", "8a", "8b", "9a"],
+    "likes": ["bean"],
+    "dislikes": ["tomato"],
+    "traits": ["tuber", "cool-season"]
+  },
+  {
+    "name": "bean",
+    "family": "Fabaceae",
+    "spacing_cm": 15,
+    "height_cm": 50,
+    "zones": ["3b", "4a", "4b", "5a", "5b", "6a", "6b", "7a", "7b", "8a", "8b", "9a", "9b", "10a"],
+    "likes": ["carrot", "potato"],
+    "dislikes": ["onion"],
+    "traits": ["legume", "nitrogen-fixing"]
+  },
+  {
+    "name": "onion",
+    "family": "Amaryllidaceae",
+    "spacing_cm": 10,
+    "height_cm": 35,
+    "zones": ["3a", "3b", "4a", "4b", "5a", "5b", "6a", "6b", "7a", "7b", "8a", "8b", "9a"],
+    "likes": ["carrot", "lettuce"],
+    "dislikes": ["bean"],
+    "traits": ["bulb", "cool-season"]
+  }
+]
